@@ -1,7 +1,0 @@
-1.DDPG_r_spilt_xy  奖励= -末端与目标分别在xy坐标上的差
-
-2.DDPG_r_sqrt_dist  奖励= -末端与目标之间的直线距离
-
-3.DDPG_r_sqrt_direction_index  奖励= -直线距离+方向知识（上次距离大于这次距离时为1 ，否则为-1）
-
-4.DDPG_r_distance_difference  奖励= 上次距离于这次距离的差
