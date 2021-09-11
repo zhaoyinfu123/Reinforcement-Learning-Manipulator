@@ -1,2 +1,0 @@
-DDPG reward设置为-(abs(x_end-x_obj)+abs(y_end-y_obj))
-	 且没有末端触碰目标时间奖励
