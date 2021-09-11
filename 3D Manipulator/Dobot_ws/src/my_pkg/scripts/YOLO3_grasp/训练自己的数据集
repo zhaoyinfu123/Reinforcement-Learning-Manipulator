@@ -1,0 +1,11 @@
+数据集制作完成后 运行voc2yolo3.py
+
+然后更改voc_annotation.py中的classes为自己的种类 并运行voc_annotation.py
+
+修改utils中的config.py文件中的classes为自己的种类数
+
+修改model_data中的predict_class.txt中的内容 改为自己要训练的所有种类名称
+
+根该yolo.py中的classse_path为predict_class.txt
+
+然后 运行train.py训练
