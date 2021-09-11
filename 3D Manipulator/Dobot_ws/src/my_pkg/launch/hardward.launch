@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find magician_hardware)/launch/magician_bringup.launch"/>
+  <inclued file="$(find magician_moveit_config)/launch/moveit_planning_execution.launch"/>
+</launch>

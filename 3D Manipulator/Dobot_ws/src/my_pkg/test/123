@@ -1,0 +1,19 @@
+for eps in range(10000):
+    随机生成一个机械臂能够到达目标xyz，
+    机械臂返回初始位置
+    获取末端xyz
+    state = [末端x, 末端y， 末端z，目标x, 目标y， 目标z]
+    for step in range(200):
+        action = policy(state)  # action为三轴的改变量，单位是弧度
+        执行action
+        获取新末端xyz
+        next_state = [新末端x, 新末端y， 新末端z，目标x, 目标y， 目标z]
+        距离reward = - 末端到目标的距离 * 系数1
+        步数reward = - step * 系数2
+        完成reward = 300 if 末端到目标的距离小于0.05 else 0
+        reward = 距离reward+ 步数reward+ 完成reward
+        done = True if 末端到目标的距离小于0.05 else False
+        将[state, next_state, action, reward, done]放入Replay_Buffer中
+        state = next_state
+        若done，则break
+    从Replay_Buffer采样，更新policy
