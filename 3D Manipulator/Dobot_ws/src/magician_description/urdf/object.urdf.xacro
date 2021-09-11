@@ -1,0 +1,24 @@
+<robot name="object">
+   <joint name="object" type="floating">
+        <origin xyz="1 0 0" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="object_link"/>
+   </joint>
+   
+   <link name="object_link">
+		<visual>
+		    <origin xyz="1 0 0" rpy="0 0 0"/>
+			<geometry>
+				<sphere radius="0.05"/>
+			</geometry>
+			<material name="red"/>
+		</visual>
+		
+		<collision>
+           <origin xyz="1 0 0" rpy="0 0 0"/>
+           <geometry>
+               <sphere radius="0.05"/>
+           </geometry>
+       </collision> 
+   </link>
+</robot>
